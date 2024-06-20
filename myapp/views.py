@@ -4,9 +4,12 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("<p>Hello</p>")
 
-def hello(request, username):
-    print(username)
-    return HttpResponse("<h2>Hello World</h2>")
+def hello(request, id):
+    print(type(id))
+    #print(username)
+    # return HttpResponse("<h2>Hello %s</h2>" % username)
+    return HttpResponse("<h2>Hello %s</h2>" % id)
+
 
 def about(request):
     return HttpResponse("About")
